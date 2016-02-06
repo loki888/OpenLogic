@@ -1,0 +1,664 @@
+/* ---------------------------
+    General Styles
+---------------------------- */
+html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+}
+body {
+    font-family:  Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color:#3c3c3c;
+    margin: 0 auto;
+}
+/*--------------------------------
+    Colors:
+Black (subheader)                                                                                  #222222;
+Super black (border, submenu bg)                                                      #212121;
+Dark grey (nav, p, menu)                                                                       #797b7c;
+Grey (text in the submenu, abstract to article, footer inf)              #9ca0a2;
+Light grey (border footer)                                                                     #dcdcdc;
+Lighter grey (footer bg)                                                                         #f8f8f8;
+                       (bg aside menu)                                                                #eaeaea;
+Bordo  (hover links&menu, h2-h3)                                                        #ae3b44;
+White (bg section)                                                                                   #fefefe;
+---------------------------------*/
+
+/*----------------------------------
+	Layout
+-------------------------------------*/
+.conteiner {
+	width: 978px;
+	min-height: 2045px;
+	margin: 0 auto;
+}
+header {
+	min-height:258px;
+}
+.supheader {               /* Header візуально був розбитий на 2 секції верхню "supheader" та нижню "subheader" */
+	min-height: 103px;
+}
+.subheader{
+	min-height: 130px;
+	background: #ae3b44;
+	border-top: 7px solid #212121;
+}
+main{
+	min-height: 1519px;
+	background: #fefefe;
+	display: block;
+	border-bottom: 1px solid #ececec;
+	word-break: break-all;
+	hyphens: auto;
+}
+aside{
+	min-height: 722px;
+	background: #fefefe;
+	min-width: 245px;
+	display: inline-block;
+	float: left;
+}
+.right{
+	max-width: 733px;
+	background: #fefefe;
+	display: inline-block;
+}
+.next{								/* .next  контейнер вище футера для перегляду попередньої та наступної статті */
+	min-height: 67px;
+}
+.partners{
+	min-height: 93px;   /* .partners  контейнер вище футера зі стрічкою партнерів */
+}
+footer{
+	min-height: 175px;
+	background: rgba(255, 0, 186, 0.73);
+	border-top: 2px solid #dcdcdc;
+}
+
+
+/*-------------------------------
+1. HEADER
+---------------------------------*/
+/* --- 1.1. LOGO--- */
+.logo{
+	font: left;
+    width: 173px;
+    margin-top: 27px;
+    height: 40px;
+    background-image: url(../img/Logo.png);
+    background-repeat: no-repeat;
+}
+.logo strong a{
+    display: block;
+    width: 106px;
+    height: 51px;
+    overflow:hidden;
+    text-indent: -9999px;
+}
+/* --- 1.2. navigation --- */
+.navigation {
+	position: relative;
+	min-width: 470px;
+	height: 32px;
+	float: right;
+	margin: -30px 36px 0 0;
+}
+.navigation_list{
+	display: inline-block;
+	list-style-type: none;
+    margin-right: 24px;
+}
+.navigation_list__ancor {
+    display: inline-block;
+    text-decoration: none;
+	font-size: 13px;
+	color: #797b7c;
+}
+.navigation_list__ancor:hover {
+	color:  #ae3b44;
+}
+/* --- 1.2.1. submenu in the navigation --- */
+.submenu{
+	position: absolute;
+	display: none;
+	top:70%;
+	left:49%;
+	min-width: 150px;
+	background:#212121;
+	padding: 0;
+}
+.navigation_list:hover .submenu{   /* submenu стає видимим при наведенні курсора */
+	display: block;
+}
+.submenu_list{
+	list-style-type: none;
+	padding: 5px 0 5px 15px;
+	border-bottom: 1px solid #2d2c2c;
+}
+.submenu_list__ancor{
+    text-decoration: none;
+	font-size: 13px;
+	color: #838687;
+}
+.submenu_list__ancor:hover{
+	color: white;
+}
+/* --- 1.2.2. subsubmenu - ще одне субменю  в середині submenu --- */
+.subsubmenu{
+	position: absolute;
+	display: none;
+	top:0%;
+	left:102%;
+	min-width: 140px;
+	background:#212121;
+	padding:0;
+}
+.submenu_list:hover .subsubmenu{
+	display: block;
+}
+/* --- 1.2.2.1. Трикутники -  елементи оформлення  submenu та  subsubmenu--- */
+ .triangle_right{
+	display: none
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-left: 7px solid #212121; /*#212121*/
+	border-bottom: 5px solid transparent;
+	position: absolute;
+	top:10%;
+	left:100%;
+	z-index: 10;
+}
+.triangle_up{
+	position: absolute;
+	top:-6%;
+	left:45%;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 6px 5px 6px;
+	border-color: transparent transparent #212121 transparent;
+}
+.triangle_right_transparent{
+	width: 0;
+	height: 0;
+	border-top: 6px solid transparent;
+	border-left: 7px solid white; /*#212121*/
+	border-bottom: 6px solid transparent;
+	position: absolute;
+	top:4.5%;
+	left:0%;
+}
+
+/* --- 1.3. supheader --- */
+.supheader{
+	background-image: url(../img/BG_Header_Map.png);
+    background-repeat: no-repeat;
+}
+.subheader{
+	padding-left: 280px;
+	background-image: url(../img/BusinessWomen.jpg);
+    background-repeat: no-repeat;
+}
+.subheader_header__h2{
+	text-transform: capitalize;
+	font-size: 24px;
+	font-family: Arial;
+	color: #fefefe;
+	display: inline-block;
+	width: 225px;
+	float: left;
+	line-height: 30px;
+}
+.subheader_header__p{
+	color: #222222;
+	font-size: 12px;
+	line-height: 19px;
+	margin-right: 32px;
+}
+
+/*-------------------------------
+	2.ASIDE
+---------------------------------*/
+/* --- 2.1. Основне menu з подвыйним акордеоном --- */
+.menu_header{
+	padding-top:10px;
+	padding-left:16px;
+	background-image: url(../img/BG_Menu_Lines.png);
+	margin: 0;
+	height: 30px;
+}
+.menu_list{
+	max-width: 245px;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+.menu_list__item {
+	display:block;
+	border-bottom: 1px solid #dee1e2;
+	list-style-type: none;
+    text-decoration: none;
+	font-size: 12px;
+	color: #222222;
+}
+.menu_list__item___ancor{
+	text-decoration: none;
+	display: inline-block;
+	padding:15px 0 0 15px;
+	width: 227px;
+	height: 23px;
+	vertical-align: top;
+	text-transform: capitalize;
+	line-height: 10px;
+	color: #222222;
+}
+.menu_list__item___ancor:hover{
+	color: #ae3b44;
+}
+/* --- 2.1.1 Стилізація першого  акордеону --- */
+.accordeon>.menu_list__item___ancor{
+	background: #f4f7f8;
+	padding-left: 15px;
+	margin: 0px;
+}
+.accordeon>.menu_list__item:last-child{
+	border-bottom: none;
+}
+/* --- 2.1.2 Стилізація другого акордеону --- */
+.subaccordeon{
+	background: #eaeaea;
+	margin: 0px;
+	overflow:hiden;
+}
+.subaccordeon>.menu_list__item:last-child{
+	border-bottom: none;
+}
+.subaccordeon>.menu_list__item___ancor{
+	padding-left: 30px;
+	width: 212px;
+}
+
+/*-------------------------------------------------
+Елементи оформлення акордеонів (Стрілки фони)
+_______________________________*/
+.arrow_right{
+	background-image: url(../img/Arrow_right_sideBar.png);
+	background-repeat: no-repeat;
+}
+.arrow_down{
+	background-image: url(../img/Arrow_down_sideBar.png);
+	background-repeat: no-repeat;
+	background-position: 93% 50%;
+}
+.menu_list li.arrow_right{
+	background-position: 93% 50%;
+}
+.menu_list__item___ancor.arrow_down{
+	
+	background-position: 93% 50%;
+}
+.menu_list__item.subaccordeon.arrow_right{
+	background-position: 7% 50%;
+}
+/* --- 2.1.3. Стилі потрібні для функціонування JQery --- */
+.accordeon, .subaccordeon{
+	display: none;
+}
+.show{
+	display:block;
+}
+.active{
+	color: #fefefe;
+	position: relative;
+	background:#ae3b44 !important; 
+}
+.active>.menu_list__item___ancor{
+	color: #fefefe;
+	background:#ae3b44 !important; 
+}
+.active:hover{
+	color: #fefefe;
+	background:#ae3b44;
+}
+
+.active:after{
+	content: "";
+	display:block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 5px 0 5px 7px;
+	border-color: transparent transparent transparent #ae3b44;
+	position: absolute;
+	top:38%;
+	right:-2.5%;
+}
+.menu_list__item.active>a:hover{
+	color:#ffffff;
+}
+
+/*-------------------------------
+	3.SECTION
+---------------------------------*/
+section{
+	background: #fefefe;
+}
+/* --- 3.1. Шапка розділу з заголовком, текстом та датою публікації --- */
+.head_h1{
+	display: inline-block;
+	width: 470px;
+	height: 80px;
+	line-height: 40px;
+	float: left;
+	margin-bottom: 0px;
+	padding-left: 40px;
+}
+date{
+	margin-top:20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	float: right;
+	display: inline-block;
+	width: 85px;
+	height: 56px;
+	background-image: url(../img/BG_Date_Lines.png);
+	color: #bebebf;
+	text-align: center;
+}
+.number{
+	font-weight: 700;
+	font-size:17px;
+}
+.head_p{
+	font-style: italic;
+	padding-top: 25px;
+	font-size: 15px;
+	font-weight:500;
+	color:#b1b3b3;
+	padding-left: 40px;
+	padding-right: 30px;
+	line-height: 22px;
+	margin-bottom:25px;
+}
+
+.head_p:after{
+	margin-top: 25px;
+    content: "";
+	display:block;
+    border-bottom: 1px solid #ececec;
+}
+.head_p:before{
+	margin-bottom: 25px;
+    content: "";
+	display:block;
+    border-bottom: 1px solid #ececec;
+}
+/* --- 3.2. article  --- */
+article{
+padding-left: 40px;	
+padding-right: 30px;	
+}
+article:after{
+    content: "";
+	display:block;
+    border-bottom: 1px solid #ececec;
+}
+/* --- 3.2.1  Оформлення  ілюстрацій в статті --- */
+.article_figure{
+	float:left;
+	padding: 25px 33px 25px 0;
+}
+.article_figure__img {
+	border-bottom: 7px solid  #222222;
+}
+.centered{
+	float: none;
+	margin-left: 15%;
+	padding: 40px 0 40px 0;
+}
+figcaption{
+	text-align: center;
+	vertical-align: middle;
+}
+.article_header{
+	color: #ae3b44;
+}
+/*-------------------------------
+4. NEXT arrow
+-----------------------------------*/
+.previous_arrow,.next_arrow{
+	color:#ae3b44;
+	font-size:15px;
+	cursor: pointer;
+}
+.previous_arrow{
+	float: left;
+	padding-left: 70px;
+	padding-top:28px;
+	background-image: url(../img/Arrow_Next_Left.png);
+	background-repeat: no-repeat;
+	background-position: 25% 90%;
+}
+.next_arrow{
+	float:right;
+	padding-right: 70px;
+	padding-top:28px;
+	background-image: url(../img/Arrow_Next_Right.png);
+	background-repeat: no-repeat;
+	background-position: 70% 90%;
+}
+
+
+/*-------------------------------
+5. Партери
+-----------------------------------*/
+.partners{
+	border-top: 1px solid #ececec;
+}
+.partners span {
+	padding-left: 5px;
+	font-size: 18px;
+}
+.creative_studio,.kreatif,.av_studio,.gofx,
+.leaftech{
+	display: inline-block;
+	margin-left: 60px;
+	margin-top: 20px;
+	width: 104px;
+	height: 44px;
+	cursor: pointer;
+	 -webkit-transition: background-image 0.2s;
+     -moz-transition: background-image 0.2s;
+     -o-transition:  background-image 0.2s;
+     transition: background-image 0.2s;
+}
+.creative_studio {
+	background-image: url(../img/Colour_Creative_logo.png);
+	background-repeat: no-repeat;
+}
+.creative_studio:hover{
+	background-image: url(../img/Grey_Creative_logo.png);
+}
+
+.kreatif {
+	background-image: url(../img/Colour_Kreatif_logo.png);
+	background-repeat: no-repeat;
+}
+.kreatif:hover{
+	background-image: url(../img/Grey_Kreatif_logo.png);
+}
+
+.av_studio {
+	background-image: url(../img/Colour_AvStudio_logo.png);
+	background-repeat: no-repeat;
+}
+.av_studio:hover {
+	background-image: url(../img/Grey_AvStudio_logo.png);
+}
+
+.gofx {
+	background-image: url(../img/Colour_GOFX_logo.png);
+	background-repeat: no-repeat;
+	background-position: 0 100%;
+}
+.gofx:hover {
+	background-image: url(../img/Grey_GOFX_logo.png);
+}
+
+.leaftech {
+	background-image: url(../img/Colour_Leafteach_logo.png);
+	background-repeat: no-repeat;
+	background-position: ;
+}
+.leaftech:hover {
+	background-image: url(../img/Grey_Leafteach_logo.png);
+}
+
+/*-------------------------------
+6. FOOTER
+-----------------------------------*/
+footer{
+	background: #f8f8f8;
+}
+/*---6.1.  Оформлення посилань у формі списків------*/
+.links{
+	display: inline-block;
+	list-style-type: none;
+	padding:0;
+}
+.footer_links__first,
+.footer_links__second,
+.footer_links__third,
+.footer_links__forth,
+.footer_links__fifth {
+	float:left;
+	margin:0;
+	padding:0;
+}
+.footer_links__first{
+	padding-left: 5px;
+}
+.footer_links__second{
+	padding-left: 70px;
+}
+.footer_links__third{
+	padding-left: 80px;
+}
+.footer_links__forth{
+	padding-left: 85px;
+}
+.footer_links__fifth{
+	padding-left: 147px;
+}
+.links_ancor {
+    display: inline-block;
+    text-decoration: none;
+	font-size: 12px;
+	color: #797b7c;
+}
+.links_ancor:hover {
+	color:  #ae3b44;
+}
+.headings{
+	width: 976px;
+}
+.footer_links__header{
+	float:left;
+	display: block;
+	font-size: 15px;
+	margin: 0;
+	padding: 20px 0 0 5px;
+}
+.quick{
+	padding-left:5px;
+}
+.security{
+	padding-left:370px;
+}
+.titlesocial{
+	padding-left:125px;
+}
+/*---6.1.  Оформлення  Socials іконок ------*/
+.social{
+	padding: 20px 0 20px 0;
+	width: 120px;
+}
+.social_twitter,
+.social_facebook,
+.social_in,
+.social_rss{
+	float: left;
+	width: 24px;
+	height: 24px;
+	margin-left: 6px;
+	display: inline-block;
+    text-decoration: none;
+	cursor: pointer;
+	 -webkit-transition: background-image  0.1s;
+     -moz-transition: background-image 0.1s;
+     -o-transition:  background-image  0.1s;
+     transition: background-image  0.1s;
+}
+.social_twitter{
+	background-image: url(../img/Colour_Twitter_logo.png);
+}
+.social_facebook{
+		background-image: url(../img/Colour_Facebook_logo.png);
+}
+.social_in{
+	background-image: url(../img/Colour_Inn_logo.png);
+}
+.social_rss{
+	background-image: url(../img/Colour_rss_logo.png);
+}
+.social_twitter:hover{
+	background-image: url(../img/Grey_Twitter_logo.png);
+}
+.social_facebook:hover{
+		background-image: url(../img/Grey_Facebook_logo.png);
+}
+.social_in:hover{
+	background-image: url(../img/Grey_Inn_logo.png);
+}
+.social_rss:hover{
+	background-image: url(../img/Grey_rss_logo.png);
+}
+footer_links__copyright{
+	font-size: 11px;
+}
+
+/*--------------------------------
+    Clearfix / Forms
+---------------------------------*/
+.clearfix:before, 
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear:both;
+}
+.clearfix {
+    zoom: 1; /* For IE6/7 (has layout) */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
